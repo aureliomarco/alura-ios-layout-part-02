@@ -8,26 +8,32 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     @IBOutlet weak var colecaoPacotesViagem: UICollectionView!
+    @IBOutlet weak var pesquisarViagens: UISearchBar!
+    @IBOutlet weak var labelContadorPacotes: UILabel!
     
-    let listaViagem: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    let listaComTodasViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    var listaViagens: Array<Viagem> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listaViagens = listaComTodasViagens
         colecaoPacotesViagem.dataSource = self
         colecaoPacotesViagem.delegate = self
+        pesquisarViagens.delegate = self
+        self.labelContadorPacotes.text = atualizaContadorLabel()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.listaViagem.count
+        return self.listaViagens.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaPacote", for: indexPath) as! PacoteViagemCollectionViewCell
         
-        let viagemAtual = listaViagem[indexPath.item]
+        let viagemAtual = listaViagens[indexPath.item]
 
         celulaPacote.labelTitulo.text = viagemAtual.titulo
         celulaPacote.labelQuantidadeDias.text = "\(viagemAtual.quantidadeDeDias) dias"
@@ -46,5 +52,18 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         
         return CGSize(width: larguraDaCelula - 15, height: 160)
     }
-
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        listaViagens = listaComTodasViagens
+        
+        if searchText != "" {
+            listaViagens = listaViagens.filter({ $0.titulo.contains(searchText) })
+        }
+        self.labelContadorPacotes.text = atualizaContadorLabel()
+        colecaoPacotesViagem.reloadData()
+    }
+    
+    func atualizaContadorLabel() -> String {
+        return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
+    }
 }

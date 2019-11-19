@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sL8-5i-odj">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -260,16 +260,15 @@
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKz-Rt-53k">
-                                        <rect key="frame" x="0.0" y="38" width="290" height="30"/>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T82-lU-Y1R">
+                                        <rect key="frame" x="0.0" y="38" width="290" height="56"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="rcZ-0V-ENL"/>
+                                            <constraint firstAttribute="height" constant="56" id="X4Z-kA-KAv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pacotes encontrados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-NP-YGK">
-                                        <rect key="frame" x="0.0" y="71" width="290" height="35"/>
+                                        <rect key="frame" x="0.0" y="97" width="290" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="zaR-BS-4sX"/>
                                         </constraints>
@@ -278,7 +277,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-Zb-WJ0">
-                                        <rect key="frame" x="0.0" y="109" width="290" height="390"/>
+                                        <rect key="frame" x="0.0" y="135" width="290" height="364"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mUj-sA-15e">
                                             <size key="itemSize" width="135" height="160"/>
@@ -346,6 +345,8 @@
                     <tabBarItem key="tabBarItem" title="Pacotes" id="6dJ-aO-UTf"/>
                     <connections>
                         <outlet property="colecaoPacotesViagem" destination="4ad-Zb-WJ0" id="a6O-Eg-rTL"/>
+                        <outlet property="labelContadorPacotes" destination="0i6-NP-YGK" id="7VB-cf-Uh0"/>
+                        <outlet property="pesquisarViagens" destination="T82-lU-Y1R" id="hPl-aO-h6P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3f-Ry-jsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
