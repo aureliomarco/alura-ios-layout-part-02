@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66821B0F2371BB68005ACA62 /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */; };
+		66821B112371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */; };
 		66AB758A237062AA00440272 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB7589237062AA00440272 /* TableViewCell.swift */; };
 		66AB758C23706BEA00440272 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 66AB758B23706BEA00440272 /* Assets */; };
 		66E7716B236B18C200953188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7716A236B18C200953188 /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
+		66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
 		66AB7589237062AA00440272 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		66AB758B23706BEA00440272 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		66E77167236B18C200953188 /* Alura Viagens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alura Viagens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66821B0B2371B7F1005ACA62 /* Pacotes */ = {
+			isa = PBXGroup;
+			children = (
+				66821B0C2371B821005ACA62 /* Controller */,
+				66821B0D2371B82A005ACA62 /* View */,
+			);
+			path = Pacotes;
+			sourceTree = "<group>";
+		};
+		66821B0C2371B821005ACA62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66821B0D2371B82A005ACA62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		66AB758E237091C600440272 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +138,7 @@
 				66E7716C236B18C200953188 /* SceneDelegate.swift */,
 				66AB758E237091C600440272 /* Model */,
 				66AB758F237091F700440272 /* Home */,
+				66821B0B2371B7F1005ACA62 /* Pacotes */,
 				66AB75932370AAFA00440272 /* ViagemDAO */,
 				66AB758B23706BEA00440272 /* Assets */,
 				66E77170236B18C200953188 /* Main.storyboard */,
@@ -191,8 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66821B0F2371BB68005ACA62 /* PacotesViagensViewController.swift in Sources */,
 				66E7717F236B60E100953188 /* Viagem.swift in Sources */,
 				66E77183236B634500953188 /* ViagemDAO.swift in Sources */,
+				66821B112371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift in Sources */,
 				66E7716F236B18C200953188 /* ViewController.swift in Sources */,
 				66AB758A237062AA00440272 /* TableViewCell.swift in Sources */,
 				66E7716B236B18C200953188 /* AppDelegate.swift in Sources */,
@@ -343,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMXXYN9389;
 				INFOPLIST_FILE = "Alura Viagens/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMXXYN9389;
 				INFOPLIST_FILE = "Alura Viagens/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
