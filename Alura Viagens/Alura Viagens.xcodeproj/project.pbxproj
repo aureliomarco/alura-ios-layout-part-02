@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		665FA5D5238AF289000F4ADF /* DetalhesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FA5D4238AF289000F4ADF /* DetalhesViagensViewController.swift */; };
+		665FA5D7238B0C44000F4ADF /* PacoteViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FA5D6238B0C44000F4ADF /* PacoteViagem.swift */; };
+		665FA5D9238B103F000F4ADF /* PacoteViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FA5D8238B103F000F4ADF /* PacoteViagemDAO.swift */; };
+		665FA5DB238B10C1000F4ADF /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 665FA5DA238B10C1000F4ADF /* Assets */; };
 		66821B0F2371BB68005ACA62 /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */; };
 		66821B112371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */; };
 		66AB758A237062AA00440272 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB7589237062AA00440272 /* TableViewCell.swift */; };
-		66AB758C23706BEA00440272 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 66AB758B23706BEA00440272 /* Assets */; };
 		66E7716B236B18C200953188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7716A236B18C200953188 /* AppDelegate.swift */; };
 		66E7716D236B18C200953188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7716C236B18C200953188 /* SceneDelegate.swift */; };
 		66E7716F236B18C200953188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E7716E236B18C200953188 /* ViewController.swift */; };
@@ -24,10 +26,12 @@
 
 /* Begin PBXFileReference section */
 		665FA5D4238AF289000F4ADF /* DetalhesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViagensViewController.swift; sourceTree = "<group>"; };
+		665FA5D6238B0C44000F4ADF /* PacoteViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagem.swift; sourceTree = "<group>"; };
+		665FA5D8238B103F000F4ADF /* PacoteViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacoteViagemDAO.swift; sourceTree = "<group>"; };
+		665FA5DA238B10C1000F4ADF /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ViagemDAO/Assets; sourceTree = "<group>"; };
 		66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
 		66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
 		66AB7589237062AA00440272 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		66AB758B23706BEA00440272 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		66E77167236B18C200953188 /* Alura Viagens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alura Viagens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E7716A236B18C200953188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E7716C236B18C200953188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				66E7717E236B60E100953188 /* Viagem.swift */,
+				665FA5D6238B0C44000F4ADF /* PacoteViagem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 		66AB75932370AAFA00440272 /* ViagemDAO */ = {
 			isa = PBXGroup;
 			children = (
+				665FA5D8238B103F000F4ADF /* PacoteViagemDAO.swift */,
 				66E77182236B634500953188 /* ViagemDAO.swift */,
 			);
 			path = ViagemDAO;
@@ -167,8 +173,8 @@
 				66821B0B2371B7F1005ACA62 /* Pacotes */,
 				665FA5D1238AEFCD000F4ADF /* DetalhesViagem */,
 				66AB75932370AAFA00440272 /* ViagemDAO */,
-				66AB758B23706BEA00440272 /* Assets */,
 				66E77170236B18C200953188 /* Main.storyboard */,
+				665FA5DA238B10C1000F4ADF /* Assets */,
 				66E77173236B18C400953188 /* Assets.xcassets */,
 				66E77175236B18C400953188 /* LaunchScreen.storyboard */,
 				66E77178236B18C400953188 /* Info.plist */,
@@ -235,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E77177236B18C400953188 /* LaunchScreen.storyboard in Resources */,
-				66AB758C23706BEA00440272 /* Assets in Resources */,
+				665FA5DB238B10C1000F4ADF /* Assets in Resources */,
 				66E77174236B18C400953188 /* Assets.xcassets in Resources */,
 				66E77172236B18C200953188 /* Main.storyboard in Resources */,
 			);
@@ -254,8 +260,10 @@
 				665FA5D5238AF289000F4ADF /* DetalhesViagensViewController.swift in Sources */,
 				66821B112371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift in Sources */,
 				66E7716F236B18C200953188 /* ViewController.swift in Sources */,
+				665FA5D7238B0C44000F4ADF /* PacoteViagem.swift in Sources */,
 				66AB758A237062AA00440272 /* TableViewCell.swift in Sources */,
 				66E7716B236B18C200953188 /* AppDelegate.swift in Sources */,
+				665FA5D9238B103F000F4ADF /* PacoteViagemDAO.swift in Sources */,
 				66E7716D236B18C200953188 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -364,7 +364,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EbM-Zq-PN3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="581"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RdL-tC-MDS">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RdL-tC-MDS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="185" id="6wh-Gp-nGK"/>
@@ -493,6 +493,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFt-vp-7R9">
+                                <rect key="frame" x="13" y="10" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="botaoVoltar:" destination="kU3-V4-Yct" eventType="touchUpInside" id="UNE-M0-U2R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -502,6 +510,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yOg-ui-SeA"/>
                     </view>
+                    <connections>
+                        <outlet property="imagemPacoteViagem" destination="RdL-tC-MDS" id="epZ-YJ-CX2"/>
+                        <outlet property="labelDataViagem" destination="GRV-Rf-n8U" id="weK-D6-cLJ"/>
+                        <outlet property="labelDescricaoPacoteViagem" destination="l8j-KQ-7D9" id="jBe-2v-EOv"/>
+                        <outlet property="labelPrecoPacoteViagem" destination="WWf-Wr-18q" id="kSx-7D-gFa"/>
+                        <outlet property="labelTituloPacoteViagem" destination="GwT-nP-K1h" id="hry-gY-gFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMD-lq-FfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
