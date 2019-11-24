@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664D2425238B40D2001B0993 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 664D2424238B40D2001B0993 /* Assets */; };
 		665FA5D5238AF289000F4ADF /* DetalhesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FA5D4238AF289000F4ADF /* DetalhesViagensViewController.swift */; };
 		665FA5D7238B0C44000F4ADF /* PacoteViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FA5D6238B0C44000F4ADF /* PacoteViagem.swift */; };
 		665FA5D9238B103F000F4ADF /* PacoteViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665FA5D8238B103F000F4ADF /* PacoteViagemDAO.swift */; };
-		665FA5DB238B10C1000F4ADF /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 665FA5DA238B10C1000F4ADF /* Assets */; };
 		66821B0F2371BB68005ACA62 /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */; };
 		66821B112371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */; };
 		66AB758A237062AA00440272 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB7589237062AA00440272 /* TableViewCell.swift */; };
@@ -25,10 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		664D2424238B40D2001B0993 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		665FA5D4238AF289000F4ADF /* DetalhesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViagensViewController.swift; sourceTree = "<group>"; };
 		665FA5D6238B0C44000F4ADF /* PacoteViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagem.swift; sourceTree = "<group>"; };
 		665FA5D8238B103F000F4ADF /* PacoteViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacoteViagemDAO.swift; sourceTree = "<group>"; };
-		665FA5DA238B10C1000F4ADF /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; path = ViagemDAO/Assets; sourceTree = "<group>"; };
 		66821B0E2371BB68005ACA62 /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
 		66821B102371BD3F005ACA62 /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
 		66AB7589237062AA00440272 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +55,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		664D241D238B3D9A001B0993 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		665FA5D1238AEFCD000F4ADF /* DetalhesViagem */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +173,7 @@
 		66E77169236B18C200953188 /* Alura Viagens */ = {
 			isa = PBXGroup;
 			children = (
+				664D241D238B3D9A001B0993 /* New Group */,
 				66E7716A236B18C200953188 /* AppDelegate.swift */,
 				66E7716C236B18C200953188 /* SceneDelegate.swift */,
 				66AB758E237091C600440272 /* Model */,
@@ -174,7 +182,7 @@
 				665FA5D1238AEFCD000F4ADF /* DetalhesViagem */,
 				66AB75932370AAFA00440272 /* ViagemDAO */,
 				66E77170236B18C200953188 /* Main.storyboard */,
-				665FA5DA238B10C1000F4ADF /* Assets */,
+				664D2424238B40D2001B0993 /* Assets */,
 				66E77173236B18C400953188 /* Assets.xcassets */,
 				66E77175236B18C400953188 /* LaunchScreen.storyboard */,
 				66E77178236B18C400953188 /* Info.plist */,
@@ -241,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E77177236B18C400953188 /* LaunchScreen.storyboard in Resources */,
-				665FA5DB238B10C1000F4ADF /* Assets in Resources */,
+				664D2425238B40D2001B0993 /* Assets in Resources */,
 				66E77174236B18C400953188 /* Assets.xcassets in Resources */,
 				66E77172236B18C200953188 /* Main.storyboard in Resources */,
 			);
