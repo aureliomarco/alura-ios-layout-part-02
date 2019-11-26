@@ -36,6 +36,7 @@ class DetalhesViagensViewController: UIViewController {
             labelDescricaoPacoteViagem.text = pacote.descricao
             labelDataViagem.text = pacote.dataViagem
             labelPrecoPacoteViagem.text = pacote.viagem.preco
+            //Teste do git
         }
         
     }
