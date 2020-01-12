@@ -20,6 +20,7 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var imagemIconBreakfast: UIImageView!
     @IBOutlet weak var imagemIconBack: UIButton!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
+    @IBOutlet weak var textFieldData: UITextField!
 
     var pacoteSelecionado: PacoteViagem? = nil
 
@@ -47,7 +48,22 @@ class DetalhesViagensViewController: UIViewController {
         self.scrollPrincipal.contentSize = CGSize(width: scrollPrincipal.frame.width, height: scrollPrincipal.frame.height + 320)
     }
 
+    @objc func exibeDataTextField(_ sender: UIDatePicker) {
+        let formatador = DateFormatter()
+        formatador.dateFormat = "dd/MM/yyyy"
+        textFieldData.text = formatador.string(from: sender.date)
+    }
+
     @IBAction func botaoVoltar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func textFieldEntrouFoco(_ sender: UITextField) {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        sender.inputView = datePicker
+        
+        datePicker.addTarget(self, action: #selector(exibeDataTextField(_:)), for: .valueChanged)
+    }
+    
 }

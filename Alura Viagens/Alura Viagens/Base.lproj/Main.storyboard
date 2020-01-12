@@ -572,22 +572,25 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cj0-bP-gXS">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome do cartão de crédito" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frD-Zk-hyU">
                                                         <rect key="frame" x="0.0" y="39" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="data de validade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32N-12-d1T">
                                                         <rect key="frame" x="0.0" y="78" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="textFieldEntrouFoco:" destination="kU3-V4-Yct" eventType="editingDidBegin" id="VvW-VV-src"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDQ-2r-nuX">
                                                         <rect key="frame" x="0.0" y="117" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCh-OA-00T">
                                                         <rect key="frame" x="0.0" y="156" width="355" height="30"/>
@@ -634,6 +637,7 @@
                         <outlet property="labelPrecoPacoteViagem" destination="WWf-Wr-18q" id="kSx-7D-gFa"/>
                         <outlet property="labelTituloPacoteViagem" destination="GwT-nP-K1h" id="hry-gY-gFn"/>
                         <outlet property="scrollPrincipal" destination="1NN-RN-YK9" id="DiP-kG-5Vc"/>
+                        <outlet property="textFieldData" destination="32N-12-d1T" id="bLQ-q8-B98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMD-lq-FfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
