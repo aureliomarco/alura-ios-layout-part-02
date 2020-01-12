@@ -9,7 +9,7 @@
 import UIKit
 
 class DetalhesViagensViewController: UIViewController {
-    
+
     @IBOutlet weak var imagemPacoteViagem: UIImageView!
     @IBOutlet weak var labelTituloPacoteViagem: UILabel!
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
@@ -19,11 +19,14 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var imagemIconHotel: UIImageView!
     @IBOutlet weak var imagemIconBreakfast: UIImageView!
     @IBOutlet weak var imagemIconBack: UIButton!
-    
+    @IBOutlet weak var scrollPrincipal: UIScrollView!
+
     var pacoteSelecionado: PacoteViagem? = nil
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(aumentarScroll(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 
         imagemIconAirplane.image = UIImage(named: "Assets/icon_airplane.png")
         imagemIconHotel.image = UIImage(named: "Assets/icon_hotel.png")
@@ -38,6 +41,10 @@ class DetalhesViagensViewController: UIViewController {
             labelPrecoPacoteViagem.text = pacote.viagem.preco
         }
         
+    }
+
+    @objc func aumentarScroll(notification: Notification) {
+        self.scrollPrincipal.contentSize = CGSize(width: scrollPrincipal.frame.width, height: scrollPrincipal.frame.height + 320)
     }
 
     @IBAction func botaoVoltar(_ sender: UIButton) {
