@@ -69,6 +69,8 @@ class DetalhesViagensViewController: UIViewController {
     @IBAction func botaoFinalizarCompra(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
     }
 }
