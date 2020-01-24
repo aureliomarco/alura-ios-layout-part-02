@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sL8-5i-odj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iu2-jE-XaA">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -8,10 +8,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="68k-3P-nFH">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="iu2-jE-XaA" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="baN-Aa-bQw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sL8-5i-odj" kind="relationship" relationship="rootViewController" id="QAU-PW-zsc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pc1-4l-J0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1793" y="134"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YYh-Jf-2GX">
             <objects>
                 <tabBarController id="sL8-5i-odj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fMV-qN-UaG"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T0s-YF-GcZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -229,7 +246,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Procurar" id="3xb-cv-KHT"/>
+                    <tabBarItem key="tabBarItem" title="Procurar" image="icon_search.png" id="3xb-cv-KHT"/>
                     <connections>
                         <outlet property="tabelaViagens" destination="dYo-Bn-LBM" id="ZOL-6q-7Oo"/>
                         <outlet property="viewHoteis" destination="U2O-mn-xTT" id="rqV-Df-NHm"/>
@@ -260,7 +277,7 @@
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T82-lU-Y1R">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="T82-lU-Y1R">
                                         <rect key="frame" x="0.0" y="38" width="345" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="X4Z-kA-KAv"/>
@@ -342,7 +359,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q7e-Ma-kBT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pacotes" id="6dJ-aO-UTf"/>
+                    <tabBarItem key="tabBarItem" title="Pacotes" image="icon_package.png" id="6dJ-aO-UTf"/>
                     <connections>
                         <outlet property="colecaoPacotesViagem" destination="4ad-Zb-WJ0" id="a6O-Eg-rTL"/>
                         <outlet property="labelContadorPacotes" destination="0i6-NP-YGK" id="7VB-cf-Uh0"/>
@@ -691,7 +708,7 @@
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jlO-o0-Jxl">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jlO-o0-Jxl">
                                         <rect key="frame" x="0.0" y="28.5" width="355" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="vP9-pM-2jM"/>
@@ -743,6 +760,9 @@
                                         <state key="normal" title="Voltar para home">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="botaoVoltarHOme:" destination="dnP-5h-Jh3" eventType="touchUpInside" id="fvi-FT-zJw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -759,6 +779,7 @@
                         <viewLayoutGuide key="safeArea" id="WaA-TA-BdZ"/>
                     </view>
                     <connections>
+                        <outlet property="botaoVoltarHome" destination="zMe-nO-iJi" id="eWk-pR-gpp"/>
                         <outlet property="imagemPacoteViagem" destination="jlO-o0-Jxl" id="TIX-1N-dL4"/>
                         <outlet property="labelDataPacoteViagem" destination="fuO-rQ-6Q5" id="r1d-aI-gaq"/>
                         <outlet property="labelDescricaoPacoteViagem" destination="u85-pM-YKH" id="OZ9-Hp-Ne5"/>
@@ -774,5 +795,7 @@
     </scenes>
     <resources>
         <image name="icon_back.png" width="50" height="50"/>
+        <image name="icon_package.png" width="25" height="25"/>
+        <image name="icon_search.png" width="25" height="25"/>
     </resources>
 </document>

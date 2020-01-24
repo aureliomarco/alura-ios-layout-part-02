@@ -71,6 +71,6 @@ class DetalhesViagensViewController: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
         controller.pacoteComprado = pacoteSelecionado
         controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
