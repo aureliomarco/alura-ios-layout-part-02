@@ -38,7 +38,7 @@ class DetalhesViagensViewController: UIViewController {
             imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoDaImagem)
             labelTituloPacoteViagem.text = pacote.viagem.titulo
             labelDescricaoPacoteViagem.text = pacote.descricao
-            labelDataViagem.text = pacote.dataViagem
+            labelDataViagem.text = "válido para o período de: \(pacote.dataViagem)"
             labelPrecoPacoteViagem.text = pacote.viagem.preco
         }
         
@@ -55,7 +55,9 @@ class DetalhesViagensViewController: UIViewController {
     }
 
     @IBAction func botaoVoltar(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
 
     @IBAction func textFieldEntrouFoco(_ sender: UITextField) {
